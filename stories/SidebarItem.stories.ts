@@ -4,7 +4,7 @@ import { SidebarItem } from './SidebarItem';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
-    title: 'Stagehand/SidebarItem',
+    title: 'Website/SidebarItem',
     component: SidebarItem,
     parameters: {
         // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
@@ -25,12 +25,12 @@ export const Primary: Story = {
     args: {
         label: 'Upload',
     },
-    parameters: {
+   /* parameters: {
         design: {
             type: "figma",
-            url: "https://www.figma.com/file/nK7MGo6mfWHqHHmuGQbb0H/Stagehand-1.0?node-id=697%3A20535&mode=dev",
+            url: "",
         },
-    },
+    },*/
 };
 
 export const Selected: Story = {
@@ -38,12 +38,12 @@ export const Selected: Story = {
         label: 'Manage',
         isSelected: true,
     },
-    parameters: {
-        design: {
-            type: "figma",
-            url: "https://www.figma.com/file/nK7MGo6mfWHqHHmuGQbb0H/Stagehand-1.0?node-id=697%3A20535&mode=dev",
-        },
-    },
+    /* parameters: {
+     design: {
+         type: "figma",
+         url: "",
+     },
+ },*/
 };
 
 export const Toggle: Story = {
@@ -52,12 +52,12 @@ export const Toggle: Story = {
         isSelected: false,
         hasToggle: true,
     },
-    parameters: {
-        design: {
-            type: "figma",
-            url: "https://www.figma.com/file/nK7MGo6mfWHqHHmuGQbb0H/Stagehand-1.0?node-id=697%3A20535&mode=dev",
-        },
-    },
+    /* parameters: {
+      design: {
+          type: "figma",
+          url: "",
+      },
+  },*/
 };
 
 export const ToggleSelected: Story = {
@@ -66,12 +66,12 @@ export const ToggleSelected: Story = {
         isSelected: true,
         hasToggle: true,
     },
-    parameters: {
-        design: {
-            type: "figma",
-            url: "https://www.figma.com/file/nK7MGo6mfWHqHHmuGQbb0H/Stagehand-1.0?node-id=697%3A20535&mode=dev",
-        },
-    },
+    /* parameters: {
+      design: {
+          type: "figma",
+          url: "",
+      },
+  },*/
 };
 
 export const ToggleOpen: Story = {
@@ -87,12 +87,12 @@ export const ToggleOpen: Story = {
             { hasToggle: false, label: 'Artifacts', isSelected: false, openToggle: false, isSubItem: true, },
         ],
     },
-    parameters: {
-        design: {
-            type: "figma",
-            url: "https://www.figma.com/file/nK7MGo6mfWHqHHmuGQbb0H/Stagehand-1.0?node-id=697%3A20535&mode=dev",
-        },
-    },
+    /* parameters: {
+      design: {
+          type: "figma",
+          url: "",
+      },
+  },*/
 };
 
 export const ToggleOpenSelectSubItem: Story = {
@@ -108,12 +108,12 @@ export const ToggleOpenSelectSubItem: Story = {
             { hasToggle: false, label: 'Artifacts', isSelected: false, openToggle: false, isSubItem: true, },
         ],
     },
-    parameters: {
-        design: {
-            type: "figma",
-            url: "https://www.figma.com/file/nK7MGo6mfWHqHHmuGQbb0H/Stagehand-1.0?node-id=697%3A20535&mode=dev",
-        },
-    },
+    /* parameters: {
+     design: {
+         type: "figma",
+         url: "",
+     },
+ },*/
 };
 
 export const SubItem: Story = {
@@ -122,10 +122,10 @@ export const SubItem: Story = {
         isSelected: false,
         isSubItem: true,
     },
-    parameters: {
-        design: {
-            type: "figma",
-            url: "https://www.figma.com/file/nK7MGo6mfWHqHHmuGQbb0H/Stagehand-1.0?node-id=697%3A20535&mode=dev",
-        },
-    },
+    /* parameters: {
+     design: {
+         type: "figma",
+         url: "",
+     },
+ },*/
 };

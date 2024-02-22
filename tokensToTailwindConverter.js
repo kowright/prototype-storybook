@@ -1,8 +1,6 @@
 const StyleDictionary = require('style-dictionary');
 const { registerTransforms } = require('@tokens-studio/sd-transforms');
 
-// sd-transforms, 2nd parameter for options can be added
-// See docs: https://github.com/tokens-studio/sd-transforms
 registerTransforms(StyleDictionary);
 
 StyleDictionary.registerFilter({
@@ -49,6 +47,5 @@ const sd = StyleDictionary.extend({
         },
     },
 });
-// optionally, cleanup files first..
-//sd.cleanAllPlatforms();
+
 sd.buildAllPlatforms();

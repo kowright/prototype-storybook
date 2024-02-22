@@ -4,7 +4,7 @@ import {TestPage} from './TestPage';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
-    title: 'Stagehand/TestPage',
+    title: 'Website/TestPage',
     component: TestPage,
     parameters: {
         // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
@@ -25,12 +25,12 @@ export const Primary: Story = {
     args: {
         label: 'Home',
     },
-    parameters: {
-        design: {
-            type: "figma",
-            url: "https://www.figma.com/file/nK7MGo6mfWHqHHmuGQbb0H/Stagehand-1.0?node-id=697%3A20535&mode=dev",
-        },
-    },
+    /* parameters: {
+     design: {
+         type: "figma",
+         url: "",
+     },
+ },*/
 };
 
 /*export const Properties: Story = {
@@ -40,19 +40,19 @@ export const Primary: Story = {
     parameters: {
         design: {
             type: "figma",
-            url: "https://www.figma.com/file/nK7MGo6mfWHqHHmuGQbb0H/Stagehand-1.0?node-id=697%3A20535&mode=dev",
+            url: "",
         },
     },
 };
 
-export const EnterStagehand: Story = {
+export const EnterWebsite: Story = {
     args: {
-        label: 'Enter Stagehand',
+        label: 'Enter Website',
     },
     parameters: {
         design: {
             type: "figma",
-            url: "https://www.figma.com/file/nK7MGo6mfWHqHHmuGQbb0H/Stagehand-1.0?node-id=697%3A20535&mode=dev",
+            url: "",
         },
     },
 };
@@ -64,7 +64,7 @@ export const StartTour: Story = {
     parameters: {
         design: {
             type: "figma",
-            url: "https://www.figma.com/file/nK7MGo6mfWHqHHmuGQbb0H/Stagehand-1.0?node-id=697%3A20535&mode=dev",
+            url: "",
         },
     },
 };
@@ -76,7 +76,7 @@ export const Tours: Story = {
     parameters: {
         design: {
             type: "figma",
-            url: "https://www.figma.com/file/nK7MGo6mfWHqHHmuGQbb0H/Stagehand-1.0?node-id=697%3A20535&mode=dev",
+            url: "",
         },
     },
 };*/
