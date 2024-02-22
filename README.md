@@ -4,7 +4,7 @@ This is a [Storybook](https://storybook.js.org/) project that has Next.js, Javas
 
 Use the commands below in the root of the project to see storybook:
 ```bash
- node tokensToTailwindConverter.js
+node tokensToTailwindConverter.js
 # This is the main script to convert the design tokens into tailwindCSS and create json files for the tailwind config to reference. 
 npm run storybook
 # This will run storybook with the newly created files.
