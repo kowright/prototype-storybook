@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\.storybook",
+    "\\app",
+    "\\public",
+    "\\stories"
+  ],
+  "SelectedNode": "\\tailwind.config3.ts",
+  "PreviewInSolutionExplorer": false
+}
