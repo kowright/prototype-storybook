@@ -360,8 +360,6 @@ const extendParameters = { Colours: colors, spacing: spacing};
 fs.writeFileSync('tailwind.config1.ts', JSON.stringify(extendParameters));
 */
 
-
-
 /*import StyleDictionary from 'style-dictionary';
 import { registerTransforms } from '@tokens-studio/sd-transforms';
 
@@ -414,16 +412,21 @@ StyleDictionary.extend(styleDictConfig);
 StyleDictionary.buildAllPlatforms('json');*/
 
 const StyleDictionaryModule = require('style-dictionary')
-const { makeSdTailwindConfig } = require('sd-tailwindcss-transformer')
-import('@tokens-studio/sd-transforms').then(({ registerTransforms}) => {
-    registerTransforms(StyleDictionary);
+//const { makeSdTailwindConfig } = require('sd-tailwindcss-transformer')
+import('@tokens-studio/sd-transforms').then(({ registerTransforms }) => {
+       registerTransforms(StyleDictionary);
 
+    makeSdTailwindConfig.registerTransforms(StyleDictionary);
+
+ 
     console.log("transforms are registered");
 }).catch(err => {
     console.error('Failed to import @tokens-studio/sd-transforms:', err);
 });
 
-const { registerFormat } = StyleDictionaryModule;
+//const { transformColorModifiers, transformSizeModifiers } = require('@tokens-studio/sd-transforms');
+
+//const { registerFormat } = StyleDictionaryModule;
 
 const StyleDictionary = StyleDictionaryModule.extend({
     "source": [
@@ -442,9 +445,7 @@ const StyleDictionary = StyleDictionaryModule.extend({
         },
         "spacing": {
             "buildPath": "build/types/",
-            "transforms": [
-                "ts/size/px"
-            ],
+            "transformGroup": 'tokens-studio',
             "prefix": "",
             "files": [
                 {
@@ -458,13 +459,15 @@ const StyleDictionary = StyleDictionaryModule.extend({
 }
 
 )
-//DOESN'T WORK 
-StyleDictionary.registerTransform({
-    name: 'ts/size/px', // Name of the transform
-    type: 'value', // Type of transformation (can be 'value' or 'attribute')
-    matcher: (prop) => prop.attributes.category === 'size', // Matcher function to apply the transform only to properties with a specific category, such as 'size'
-    transformer: (prop) => sizeToPx(prop.value), // Transformation logic
-});
+
+/*  StyleDictionary.registerTransform({
+      name: 'ts/size/px', // Name of the transform
+      type: 'value', // Type of transformation (can be 'value' or 'attribute')
+      matcher: (prop) => prop.attributes.category === 'size', // Matcher function to apply the transform only to properties with a specific category, such as 'size'
+      transformer: (prop) => sizeToPx(prop.value), // Transformation logic
+  });
+*/
+
 
 
 StyleDictionary.registerFormat({
@@ -487,6 +490,7 @@ StyleDictionary.registerFilter({
         return token.type === 'spacing';
     }
 })
+
 StyleDictionary.buildAllPlatforms()
 
 //after colors and spacing json is made, wrap in colors : {colors}, spacing : {spacing} <- could or could not happen
